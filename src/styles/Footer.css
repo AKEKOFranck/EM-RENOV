@@ -1,0 +1,41 @@
+footer h4{
+    background-color: black;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.info_icons{
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+a{
+    align-items: center;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width:767px) {
+    footer h4{
+        flex-direction: column;
+         height: auto;
+        position: relative;
+        gap: 70px  ;
+    }
+}
+
+@media (min-width:767px) and (max-width:1400px) {
+     footer h4{
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        gap: 70px  ;
+    }
+}

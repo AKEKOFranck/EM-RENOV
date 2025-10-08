@@ -1,0 +1,128 @@
+.about_main{
+    width: 100%;
+    height: 400vh;
+     background-image: url('../assets/F4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.about_container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 200px;
+    gap: 200px;
+}
+
+.about_cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.about_title{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.about_text{
+    padding: 0px 25px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+   
+}
+
+#about_text {
+            width: 50%;
+            background-color: rgba(245, 245, 245, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            /* Correction: syntaxe appropriée pour le backdrop-filter */
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px); /* Préfixe pour Safari */
+            margin: 20px auto;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+
+
+
+
+
+
+@media (max-width:767px) {
+    .about_main{
+        height: 500vh;
+    }
+
+    .about_container{
+        height: 80%;
+    }
+
+    #about_text, #about_boss, .about_text_boss{
+        width: 100%;
+        flex-direction: column;
+       
+    }
+
+    #about_place{
+          width: 80%;
+        flex-direction: column;
+        height: 700px;
+        position: relative;
+        gap: 200px;
+    }
+
+
+    .about_place_info{
+        width: 100%;
+        height: 50%;
+    }
+
+
+}
+
+@media (min-width:767px) and (max-width:1400px) {
+       .about_main{
+        height: 500vh;
+    }
+
+    .about_container{
+        height: 80%;
+    }
+
+    #about_text, #about_boss, .about_text_boss{
+        width: 100%;
+        flex-direction: column;
+       
+    }
+
+    #about_place{
+          width: 80%;
+        flex-direction: column;
+        height: 700px;
+        position: relative;
+        gap: 200px;
+    }
+
+
+    .about_place_info{
+        width: 100%;
+        height: 50%;
+    }
+}

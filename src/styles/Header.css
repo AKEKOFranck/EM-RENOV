@@ -1,0 +1,181 @@
+.head_main{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    background-color: whitesmoke;
+    position: fixed;
+    z-index: 1;
+}
+.nav_ico_bt{
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav_ico_bt:hover{
+    color: red;
+}
+
+.nav_box {
+  width: 20%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  gap: 30px;
+  z-index: 5;
+  background: white; /* Ajoutez une couleur de fond */
+  transition: transform 0.3s ease-in-out;
+  top: 100px;
+}
+
+/* État fermé */
+.nav_box.nav-closed {
+  transform: translateX(-100%);
+}
+
+/* État ouvert */
+.nav_box.nav-open {
+  transform: translateX(0);
+}
+
+.nav_link {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.nav_link:hover{
+    color: red;
+}
+
+.nav-open {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav_ico{
+    font-size: 1.5rem;
+}
+
+#nav_booking{
+    border: 1px solid black;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 20px;
+      transition: all 0.3s ease-in-out;
+}
+
+#nav_booking:hover{
+    background-color: rgb(220, 15, 15);
+    color: white;
+}
+
+.nav_title{
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+
+
+
+@media (max-width:767px) {
+    
+ .head_main{
+    justify-content: space-between;
+    height: 65px;
+ }
+
+ 
+#nav_booking{
+    border: 1px solid black;
+    font-size: 1.3rem;
+    position: relative;
+    left: 10px;
+}
+
+.nav_title{
+    font-size: 2rem;
+     position: relative;
+    left: 10px;
+}
+
+.nav_box{
+    width: 40%;
+     top: 65px;
+}
+
+}
+
+
+
+@media (min-width:767px) and  (max-width:1400px) {
+   
+ .head_main{
+    justify-content: space-between;
+    height: 65px;
+ }
+
+ 
+#nav_booking{
+    border: 1px solid black;
+    font-size: 1.3rem;
+    position: relative;
+    left: 10px;
+}
+
+.nav_title{
+    font-size: 2rem;
+     position: relative;
+    left: 10px;
+}
+
+.nav_box{
+    width: 40%;
+     top: 65px;
+}
+}
+
+
+@media (min-width:768px) and  (max-width:1400px) {
+
+     
+#nav_booking{
+    font-size: 2rem;
+}
+
+
+.nav_title{
+    font-size: 3rem;
+}
+.nav_box{
+    width: 40%;
+}
+.nav_link{
+    font-size: 1.5rem;
+}
+
+.nav_ico{
+    font-size: 2rem;
+}
+}
+
+
+
+
+@media (min-width:820px) and  (max-width:1400px) {
+ 
+
+}
+
+
+@media (min-width:1280px) and  (max-width:1500px) {
+ 
+}
+

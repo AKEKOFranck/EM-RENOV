@@ -1,4 +1,4 @@
-.home_main{
+.home_main {
     width: 100%;
     height: 100vh;
     background-image: url('../assets/F4.png');
@@ -6,303 +6,154 @@
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     gap: 30px;
-    
 }
 
-.home_text{
+.home_text {
     font-size: 2.5rem;
     font-style: italic;
     font-weight: 900;
     color: black;
+    text-align: center;
+    margin: 0;
+    padding: 0 20px;
 }
 
-.home_bt{
+/* Style pour le lien qui contient le bouton */
+.home_bt_link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.home_bt_link:hover {
+    text-decoration: none;
+}
+
+/* Style du bouton */
+.home_bt {
     font-size: 1.3rem;
     border: 2px outset whitesmoke;
     border-radius: 25px;
     height: 70px;
-    width: 20%;
-    background: #4a4a4a; /* Couleur de fond pour mieux voir le halo */
+    width: 250px; /* Largeur fixe pour plus de contrôle */
+    background: #4a4a4a;
     color: white;
     animation: around 2s ease-in-out infinite alternate;
     transform: scale(1);
     transition: all 0.8s ease-in-out;
-}
-
-.home_bt:hover{
-    transform: scale(1.2);
-     background: whitesmoke; 
-    color: #4a4a4a;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    margin: 0;
 }
 
+.home_bt:hover {
+    transform: scale(1.1); /* Réduit pour éviter les débordements */
+    background: whitesmoke;
+    color: #4a4a4a;
+    border-color: #4a4a4a;
+}
 
-
-
+/* Animation du halo */
 @keyframes around {
     from {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); /* Transparent au début */
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
     }
-     to {
+    to {
         box-shadow: 
             0 0 10px 2px rgba(245, 245, 245, 0.5),
-            0 0 10px 5px rgba(245, 245, 245, 0.3); /* Multiples halos */
+            0 0 10px 5px rgba(245, 245, 245, 0.3);
     }
 }
 
+/* ========== RESPONSIVE ========== */
 
+/* Mobile - Moins de 767px */
+@media (max-width: 767px) {
+    .home_main {
+        gap: 20px;
+        padding: 20px;
+    }
 
+    .home_text {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
 
-
-
-@media (max-width:767px) {
+    .home_bt {
+        width: 200px;
+        height: 60px;
+        font-size: 1.1rem;
+    }
     
-.home_text{
-    font-size: 2.3rem;
-    text-align: center;
-    font-weight: 700;
+    .home_bt:hover {
+        transform: scale(1.05); /* Effet plus subtil sur mobile */
+    }
 }
 
-.home_bt{
-    width: 50%;
-    font-size: 1.5rem;
-}
-}
-
-
-
-@media (min-width:767px) and  (max-width:1400px) {
-       
-.home_text{
-    font-size: 2.3rem;
-    text-align: center;
-    font-weight: 700;
-}
-
-.home_bt{
-    width: 50%;
-    font-size: 1.5rem;
-}
-
-}
-
-
-@media (min-width:768px) and  (max-width:1400px) {
-        
-.home_text{
-    font-size: 2.3rem;
-    text-align: center;
-    font-weight: 700;
-}
-
-.home_bt{
-    width: 50%;
-    font-size: 1.5rem;
-}
-}
-
-
-
-
-@media (min-width:820px) and  (max-width:1400px) {
- 
-
-}
-
-
-@media (min-width:1280px) and  (max-width:1500px) {
- 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width:767px) {
-    .home_main{
-        flex-direction: column;
-        height: 100vh;
-        position: relative;
-        top: -20px;
-         
+/* Tablettes - 768px à 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .home_text {
+        font-size: 2.2rem;
+        font-weight: 800;
     }
 
-    .home_title{
+    .home_bt {
+        width: 220px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Écrans moyens - 1025px à 1400px */
+@media (min-width: 1025px) and (max-width: 1400px) {
+    .home_text {
+        font-size: 2.4rem;
+    }
+
+    .home_bt {
+        width: 230px;
+    }
+}
+
+/* Grands écrans - Plus de 1400px */
+@media (min-width: 1401px) {
+    .home_text {
         font-size: 3rem;
-        font-weight: 900;
-        color: black;
     }
 
-
-    .home_box{
-        font-size: 1.5rem;
-        color: black;
-        font-weight: 900 bold;
-            position: relative;
-    top: -10px;
-    gap: 5px;
-
+    .home_bt {
+        width: 280px;
+        font-size: 1.4rem;
+        height: 75px;
     }
+}
 
+/* ========== CORRECTIONS DES ANCIENS STYLES ========== */
+
+/* Styles supprimés car non utilisés dans votre composant */
+/*
+.home_title, .home_box {
+    Ces classes ne sont pas utilisées dans votre composant Home
+    Je les ai retirées pour nettoyer le CSS
+}
+*/
+
+/* Styles pour les orientations spécifiques */
+@media (max-height: 600px) and (orientation: landscape) {
+    .home_main {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
     
-.home_box:hover{
-    transform: translateY(-10px); /* Correction de scaleY à translateY */
-    color: brown;
-   
-}
-}
-
-@media (min-width:767px) and (max-width:1400px) {
-     .home_main{
-        flex-direction: column;
-        height: 100vh;
-        position: relative;
-        top: -20px;
-         
+    .home_bt {
+        height: 50px;
     }
-
-    .home_title{
-        font-size: 3rem;
-        font-weight: 900;
-        color: black;
-    }
-
-
-    .home_box{
-        font-size: 1.3rem;
-        color: black;
-        font-weight: 900;
-            position: relative;
-    top: 10px;
-    gap: 5px;
-
-    }
-
-
-        
-.home_box:hover{
-    transform: translateY(-10px); /* Correction de scaleY à translateY */
-    color: brown;
-   
-}
-}
-
-
-
-
-
-@media (min-width:768px) and  (max-width:1400px) {
- .home_main{
-        flex-direction: column;
-        height: 100vh;
-        position: relative;
-        top: -20px;
-         
-    }
-
-    .home_title{
-        font-size: 3rem;
-        font-weight: 900;
-        color: black;
-    }
-
-
-    .home_box{
-        font-size: 2rem;
-        color: black;
-        font-weight: 900;
-            position: relative;
-    top: -100px;
-    gap: 5px;
-
-    }
-
-
-}
-
-
-
-
-@media (min-width:820px) and  (max-width:1400px) {
-.home_main{
-        flex-direction: column;
-        height: 100vh;
-        position: relative;
-        top: -20px;
-         
-    }
-
-    .home_title{
-        font-size: 3rem;
-        font-weight: 900;
-        color: black;
-    }
-
-
-    .home_box{
-        font-size: 2rem;
-        color: black;
-        font-weight: 900;
-            position: relative;
-    top: -100px;
-    gap: 5px;
-
-    }
-
-
-}
-
-
-@media (min-width:1280px) and  (max-width:1500px) {
-
-
 }
